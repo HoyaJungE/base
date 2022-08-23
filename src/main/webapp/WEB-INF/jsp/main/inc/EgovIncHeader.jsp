@@ -25,7 +25,5 @@
 <div id="logoarea">
 	<h1><a href="<c:url value='/'/>uat/uia/actionMain.do"><img src="<c:url value='/'/>images/header/logo.jpg" alt="템플릿 샘플 내부업무 사이트" /></a></h1>
 </div>
-<div id="project_title"><span class="maintitle">표준프레임워크 </span><strong>샘플 내부업무 사이트</strong>
-<a href="<c:url value='/EgovPageLink.do?link=main/sample_menu/Intro'/>" target="_blank"><img width="20" height="20" src="<c:url value='/images/question.jpg'/>" alt="메뉴구성 설명" title="메뉴구성 설명"></a>
 </div>
 <!-- //행정안전부 로고 및 타이틀 끝 -->
