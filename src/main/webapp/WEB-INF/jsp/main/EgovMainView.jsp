@@ -21,8 +21,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Language" content="ko" >
-<title>표준프레임워크 경량환경 내부업무템플릿</title>
+<title>기본 템플릿</title>
 <link href="<c:url value='/css/common.css'/>" rel="stylesheet" type="text/css" >
+
+<link href="<c:url value='/css/sb-admin/styles.css'/>" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <noscript>자바스크립트를 지원하지 않는 브라우저에서는 일부 기능을 사용하실 수 없습니다.</noscript>	
@@ -136,5 +138,11 @@
 	<!-- //footer 끝 -->
 </div>
 <!-- //전체 레이어 끝 -->
+
+<script src=<c:url value='/js/sb-admin/bootstrap.bundle.min.js'/>" />
+<script src=<c:url value='/js/sb-admin/Chart.min.js'/>" />
+<script src=<c:url value='/js/sb-admin/fontawesome-releases-v6.1.0-all.js'/>" />
+<script src=<c:url value='/js/sb-admin/scripts.js'/>" />
+<script src=<c:url value='/js/sb-admin/simple-datatables@latest.js'/>" />
 </body>
 </html>
