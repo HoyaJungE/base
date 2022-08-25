@@ -2,13 +2,6 @@
   Class Name : EgovMainView.jsp 
   Description : 메인화면
   Modification Information
- 
-      수정일         수정자                   수정내용
-    -------    --------    ---------------------------
-     2011.08.31   JJY       경량환경 버전 생성
- 
-    author   : 실행환경개발팀 JJY
-    since    : 2011.08.31 
 --%>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 
@@ -22,9 +15,7 @@
 <head>
 <meta http-equiv="Content-Language" content="ko" >
 <title>기본 템플릿</title>
-<link href="<c:url value='/css/common.css'/>" rel="stylesheet" type="text/css" >
-
-<link href="<c:url value='/css/sb-admin/styles.css'/>" rel="stylesheet" type="text/css" >
+<link href="css/common.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <noscript>자바스크립트를 지원하지 않는 브라우저에서는 일부 기능을 사용하실 수 없습니다.</noscript>	
@@ -52,7 +43,7 @@
 						 <li><div class="board_title"><img src="<c:url value='/'/>images/index/img_subtitle01.gif" width="77" height="16" alt="최종접속현황정보" /></div>
 						 	<ul>
 						 		<li><b>[기타정보의 메인화면 위치 예시]</b></li>
-						 		<li>innovate님의 최종접속정보는 2011. 06. 07 19:30 입니다.</li>
+						 		<li>innovate님의 최종접속정보는 1112011. 06. 07 19:30 입니다.</li>
 						 	</ul>
 						 </li>
 					</ul>
@@ -129,20 +120,13 @@
 					</c:forEach>
 				</div>	
 				<!-- //최신업무공지 끝 -->
-			</div>
-		</div>
-	</div>
 	<!-- //게시판 끝 -->
 	<!-- footer 시작 -->
 	<div id="footer"><c:import url="/EgovPageLink.do?link=main/inc/EgovIncFooter" /></div>
 	<!-- //footer 끝 -->
 </div>
+	</div>
+	</div>
 <!-- //전체 레이어 끝 -->
-
-<script src=<c:url value='/js/sb-admin/bootstrap.bundle.min.js'/>" />
-<script src=<c:url value='/js/sb-admin/Chart.min.js'/>" />
-<script src=<c:url value='/js/sb-admin/fontawesome-releases-v6.1.0-all.js'/>" />
-<script src=<c:url value='/js/sb-admin/scripts.js'/>" />
-<script src=<c:url value='/js/sb-admin/simple-datatables@latest.js'/>" />
 </body>
 </html>
