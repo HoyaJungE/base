@@ -1,29 +1,21 @@
-<%--
-  Class Name : EgovIncHeader.jsp
-  Description : 화면상단 Header (include)
-  Modification Information
- 
-      수정일         수정자                   수정내용
-    -------    --------    ---------------------------
-     2011.08.31   JJY       경량환경 버전 생성
- 
-    author   : 실행환경개발팀 JJY
-    since    : 2011.08.31 
---%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div id="skipNav" class="invisible">
-    <dl>
-        <dt>콘텐츠 바로가기</dt>
-        <dd><a href="#content">컨텐츠 바로가기</a></dd>
-        <dd><a href="#topnavi">메인메뉴 바로가기</a></dd>
-        <dd><a href="#leftmenu">좌메뉴 바로가기</a></dd>
-    </dl>
-</div>
-<!-- 행정안전부 로고 및 타이틀 시작 -->
+
+<!-- 공통 css 추가 시작 -->
+<link href="<c:url value='/css/sb-admin/styles.css'/>" rel="stylesheet" type="text/css" >
+<!-- 공통 css 추가 종료 -->
+
+<!-- 공통 script 추가 시작 -->
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/bootstrap.bundle.min.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/Chart.min.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/fontawesome-releases-v6.1.0-all.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/scripts.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/simple-datatables@latest.js'/>"></script>
+<!-- 공통 script 추가 종료 -->
+
+<!--  로고 및 타이틀 시작 -->
 <div id="logoarea">
-	<h1><a href="<c:url value='/'/>uat/uia/actionMain.do"><img src="<c:url value='/'/>images/header/logo.jpg" alt="템플릿 샘플 내부업무 사이트" /></a></h1>
+	<h1><a href="<c:url value='/'/>uat/uia/actionMain.do"><img src="<c:url value='/'/>images/header/logo.jpg" alt="메인페이지로 이동" /></a></h1>
 </div>
-</div>
-<!-- //행정안전부 로고 및 타이틀 끝 -->
+<!-- //로고 및 타이틀 끝 -->

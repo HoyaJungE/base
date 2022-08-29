@@ -14,8 +14,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Language" content="ko" >
+<link href="<c:url value='/'/>css/common.css" rel="stylesheet" type="text/css" >
 <title>기본 템플릿</title>
-<link href="css/common.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
 <noscript>자바스크립트를 지원하지 않는 브라우저에서는 일부 기능을 사용하실 수 없습니다.</noscript>	
@@ -24,16 +24,10 @@
 <div id="wrap">
 	<!-- header 시작 -->
 	<div id="header"><c:import url="/EgovPageLink.do?link=main/inc/EgovIncHeader" /></div>
-	<%// <div id="topnavi"><c:import url="/sym/mms/EgovMainMenuHead.do" /></div>%>
     <div id="topnavi"><c:import url="/sym/mms/EgovMainMenuHead.do" /></div>
 	<!-- //header 끝 -->	
 	<!-- container 시작 -->
 	<div id="main_container">
-		<!-- title 시작 -->
-		<div id="mainview_title_img">
-			<img src="<c:url value='/'/>images/index/img_maintitle.jpg" alt="표준프레임워크 경량환경 내부업무" />
-		<!-- //title 끝-->
-		</div>
 		<!-- 게시판 시작 -->
 		<div id="mainview_wrap">
 			<div id="main_leftcontent">
