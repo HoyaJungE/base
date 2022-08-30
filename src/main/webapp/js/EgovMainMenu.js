@@ -38,21 +38,17 @@ function createTree(arrName, vYeobu, checkValue) {
 	if (treeNodes.length > 0) {
 		preloadIcons();
 		
-		//vHtmlCode +="<table width='181' height='94' border='2' align='center' cellpadding='0' cellspacing='0'><tr>";
-		//vHtmlCode +="<td valign='bottom' background='/images/egovframework/com/left_menu_top.gif' style='background-repeat:no-repeat'>";
-	
 		if (startNode == null) startNode = 0;
 		if (openNode != 0 || openNode != null) setOpenTreeNodes(openNode);
 		if (startNode !=0) {
 			var _getTreeArrayId = getTreeArrayId(startNode)
 			var nodeValues = treeNodes[getTreeArrayId(startNode)].split("|");
-			//vHtmlCode +="<div class='LeftMenuTitle'><font color='#ffffff'>" + nodeValues[2] + "</font></div></td></tr>"
+
 		} else {
-			//vHtmlCode +="<img src='"+imgpath+"menu_base.gif' border='0' align='absbottom' alt='' >메뉴목록<br></td></tr>";
+
 		}
 		var recursedNodes = new Array();
 		addTreeNode(startNode, recursedNodes);
-		//vHtmlCode +="<tr><td height='30' valign='bottom' background='/images/egovframework/com/left_menu_btm.gif' style='background-repeat:no-repeat'>&nbsp;</td></tr></table>";
 		document.write("<ul>"+vHtmlCode+"</ul>");
 	}
 }
@@ -125,7 +121,7 @@ function addTreeNode(parentNode, recursedNodes) {
 			var isNodeOpen = isTreeNodeOpen(nodeValues[0]);
 			vHtmlCodeBg      ="<li class='leftmenu_dept01'>";
 			vHtmlCodeBgList  ="<li class='dept02'>";
-			
+
 			vHtmlCodeEmpty = "";
 			// Write out line | empty treeIcons
 			for (g=0; g<recursedNodes.length; g++) {

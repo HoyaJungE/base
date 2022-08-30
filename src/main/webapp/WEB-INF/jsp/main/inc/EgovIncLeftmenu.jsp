@@ -1,15 +1,3 @@
-<%--
-  Class Name : EgovIncLeftmenu.jsp
-  Description : 좌메뉴화면(include)
-  Modification Information
-
-      수정일         수정자                   수정내용
-    -------    --------    ---------------------------
-     2011.08.31   JJY       경량환경 버전 생성
-
-    author   : 실행환경개발팀 JJY
-    since    : 2011.08.31
---%>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ page import ="egovframework.com.cmm.LoginVO" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -21,9 +9,7 @@
  ******************************************************** */
 function fn_MovePage(nodeNum) {
     var nodeValues = treeNodes[nodeNum].split("|");
-    //parent.main_right.location.href = nodeValues[5];
     document.menuListForm.action = "${pageContext.request.contextPath}"+nodeValues[5];
-    //alert(document.menuListForm.action);
     document.menuListForm.submit();
 }
 //-->
@@ -49,7 +35,6 @@ function fn_MovePage(nodeNum) {
             <c:out value="${loginName}"/> 님</a></li>
             <li><a href="<c:url value='/uat/uia/actionLogout.do'/>">
             <img src="<c:url value='/images/leftmenu/logout.jpg' />" alt="로그아웃" /></a></li>
-            <li>최근접속:2011-10-12 13:24</li>
             </ul>
 	  	<%
 	  	}
@@ -72,6 +57,44 @@ function fn_MovePage(nodeNum) {
      </script>
     </div>
 	<div class="bottom"></div>
+</div>
+
+<div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+            <div class="nav">
+                <script type="text/javascript">
+                    <!--
+                    var Tree = new Array;
+                    if(document.menuListForm.tmp_menuNm != null){
+                        for (var j = 0; j < document.menuListForm.tmp_menuNm.length; j++) {
+                            Tree[j] = document.menuListForm.tmp_menuNm[j].value;
+                        }
+                    }
+                    createTree(Tree, true, document.getElementById("baseMenuNo").value);
+                    //-->
+                </script>
+
+                <a class='nav-link collapsed' href='#' data-bs-toggle='collapse' data-bs-target='#collapseLayouts' aria-expanded='false' aria-controls='collapseLayouts'>
+                    <div class='sb-nav-link-icon'><i class='fas fa-columns'></i></div>
+                        Layouts
+                    <div class='sb-sidenav-collapse-arrow'><i class='fas fa-angle-down'></i></div>
+                </a>
+                <div class='collapse' id='collapseLayouts' aria-labelledby='headingOne' data-bs-parent='#sidenavAccordion'>
+                    <nav class='sb-sidenav-menu-nested nav'>
+                        <a class='nav-link' href='layout-static.html'>Static Navigation</a>
+                        <a class='nav-link' href='layout-sidenav-light.html'>Light Sidenav</a>
+                    </nav>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="sb-sidenav-footer">
+            <div class="small">Logged in as: <c:out value="${loginName}"/> 님</div>
+            Start Bootstrap
+        </div>
+    </nav>
 </div>
 
 <!-- //메뉴 끝 -->
