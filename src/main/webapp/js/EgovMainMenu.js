@@ -49,7 +49,8 @@ function createTree(arrName, vYeobu, checkValue) {
 		}
 		var recursedNodes = new Array();
 		addTreeNode(startNode, recursedNodes);
-		document.write("<ul>"+vHtmlCode+"</ul>");
+		/*document.write("<ul>"+vHtmlCode+"</ul>");*/
+		document.write(vHtmlCode);
 	}
 }
 /*
@@ -117,10 +118,11 @@ function addTreeNode(parentNode, recursedNodes) {
 		if (nodeValues[1] == parentNode) {
 		
 			var lastSibling	= lastTreeSibling(nodeValues[0], nodeValues[1]);
-			var hasChildNode	= hasChildTreeNode(nodeValues[0]);
+			var hasChildNode = hasChildTreeNode(nodeValues[0]);
 			var isNodeOpen = isTreeNodeOpen(nodeValues[0]);
-			vHtmlCodeBg      ="<li class='leftmenu_dept01'>";
-			vHtmlCodeBgList  ="<li class='dept02'>";
+
+			vHtmlCodeBg      ="<a class='nav-link collapsed' href='#' data-bs-toggle='collapse' aria-expanded='false'";
+			vHtmlCodeBgList  ="<a class='nav-link'";
 
 			vHtmlCodeEmpty = "";
 			// Write out line | empty treeIcons
@@ -132,22 +134,22 @@ function addTreeNode(parentNode, recursedNodes) {
 			else recursedNodes.push(1);
 
 			if (hasChildNode) {
-				vHtmlCode +=vHtmlCodeBg+"<a href='#'>"+nodeValues[2]+"</a></li>";
+				vHtmlCode +=vHtmlCodeBg + "aria-controls='div" +nodeValues[0]+ "'" +"data-bs-target='#div" +nodeValues[0]+ "'>" +nodeValues[2]+"<div class='sb-sidenav-collapse-arrow'><i class='fas fa-angle-down'></i></div></a>";
 			} else{
 				// Start link
 				if(recursedNodes.length==1){
-				   vHtmlCode +=vHtmlCodeBg+"<a href=javascript:fn_MovePage('" + i + "');>"+nodeValues[2]+"</a></li>";
+				   vHtmlCode +=vHtmlCodeBg+" href=javascript:fn_MovePage('" + i + "');>"+nodeValues[2]+"</a>";
 				}else{
-				   vHtmlCode +=vHtmlCodeBgList+"<a href=javascript:fn_MovePage('" + i + "');>"+nodeValues[2]+"</a></li>";
+				   vHtmlCode +=vHtmlCodeBgList+" href=javascript:fn_MovePage('" + i + "');>"+nodeValues[2]+"</a>";
 				}
 			}
 		
 			if (hasChildNode) {
 				vHtmlCode +="<div id='div" + nodeValues[0] + "'";
 					if (!isNodeOpen) vHtmlCode +=" style='display: none;'";
-				vHtmlCode +=">";
+				vHtmlCode +=" class='collapse' aria-labelledby='headingOne' data-bs-parent='#sidenavAccordion'><nav class='sb-sidenav-menu-nested nav'>";
 				addTreeNode(nodeValues[0], recursedNodes);
-				vHtmlCode +="</div>";
+				vHtmlCode +="</nav></div>";
 			}
 			recursedNodes.pop();
 		}
