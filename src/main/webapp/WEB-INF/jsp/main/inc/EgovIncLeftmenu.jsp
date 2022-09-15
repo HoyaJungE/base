@@ -26,7 +26,6 @@ function fn_MovePage(nodeNum) {
                             if(loginVO == null){
                         %>
                         <div>
-                            로그인정보 없음 로그인후 사용하십시오
                             <a class="btn btn-primary" href="<c:url value='/uat/uia/egovLoginUsr.do'/>">로그인</a>
                         </div>
                         <%
@@ -34,7 +33,7 @@ function fn_MovePage(nodeNum) {
                         %>
                         <c:set var="loginName" value="<%= loginVO.getName()%>"/>
                         <div>
-                            <a href="#LINK" onclick="alert('개인정보 확인 등의 링크 제공'); return false;"><c:out value="${loginName}"/> 님</a>
+                            <a href="#LINK" class="user-nickname"><c:out value="${loginName}"/> 님</a>
                             <a class="btn btn-primary" href="<c:url value='/uat/uia/actionLogout.do'/>">로그아웃</a>
                         </div>
                         <%

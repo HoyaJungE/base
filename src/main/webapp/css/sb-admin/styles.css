@@ -4079,6 +4079,10 @@ textarea.form-control-lg {
   margin-bottom: 0;
   list-style: none;
 }
+.navbar-nav  .nav-item{
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
@@ -11442,6 +11446,7 @@ body {
 }
 .sb-sidenav .sb-sidenav-menu {
   flex-grow: 1;
+  min-height: 800px;
 }
 .sb-sidenav .sb-sidenav-menu .nav {
   flex-direction: column;
@@ -11452,6 +11457,18 @@ body {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+.sb-sidenav-menu-heading div .btn {
+  color: white;
+  font-size: 1.1em;
+  margin-left: 10px;
+  line-height: 1.2;
+}
+.sb-sidenav-menu-heading div .user-nickname {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2em;
+  vertical-align: middle;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link {
   display: flex;

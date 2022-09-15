@@ -138,7 +138,7 @@ function addTreeNode(parentNode, recursedNodes) {
 			} else{
 				// Start link
 				if(recursedNodes.length==1){
-				   vHtmlCode +=vHtmlCodeBg+" href=javascript:fn_MovePage('" + i + "');>"+nodeValues[2]+"</a>";
+				   vHtmlCode +=vHtmlCodeBgList+" href=javascript:fn_MovePage('" + i + "');>"+nodeValues[2]+"</a>";
 				}else{
 				   vHtmlCode +=vHtmlCodeBgList+" href=javascript:fn_MovePage('" + i + "');>"+nodeValues[2]+"</a>";
 				}

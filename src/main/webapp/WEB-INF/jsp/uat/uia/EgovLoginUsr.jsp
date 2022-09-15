@@ -2,14 +2,6 @@
   Class Name : EgovLoginUsr.jsp
   Description : 로그인화면
   Modification Information
- 
-      수정일         수정자                   수정내용
-    -------    --------    ---------------------------
-     2009.03.10    박지욱             최초 생성
-     2011.08.31   JJY       경량환경 버전 생성
- 
-    author   : 공통서비스 개발팀  박지욱
-    since    : 2009.03.10
 --%>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -23,7 +15,6 @@
 <meta http-equiv="Content-Language" content="ko" >
 <title>로그인</title>
 <link href="<c:url value='/'/>css/common.css" rel="stylesheet" type="text/css" >
-<link href="<c:url value='/'/>css/login.css" rel="stylesheet" type="text/css" >
 <script type="text/javascript">
 <!--
 function actionLogin() {
@@ -78,11 +69,11 @@ function getid(form) {
 }
 
 function fnInit() {
-    var message = document.loginForm.message.value;
+    /*var message = document.loginForm.message.value;
     if (message != "") {
         alert(message);
     }
-    getid(document.loginForm);
+    getid(document.loginForm);*/
 }
 //-->
 </script>
@@ -114,35 +105,45 @@ function fnInit() {
                     </div>                  
                 </div>
 
-                    <div id="login_title_div"><img alt="LOGIN 표준프레임워크 경량환경 내부업무 시스템에 오신것을 환영합니다." src="<c:url value='/' />images/login/img_logintitle.gif" /></div>        
-                        <div class="user_login">
-                        <form:form id="loginForm" name="loginForm" method="post">
-                            <fieldset><legend>조건정보 영역</legend>
-                                
-                                <div class="user_login_ultop">
-                                    <ul>
-                                        <li>
-                                            <label for="id">아이디</label>
-                                            <input type="text" class="input_style" title="아이디를 입력하세요." id="id" name="id" maxlength="10"/>
-                                        </li>
-                                        <li>
-                                            <label for="password">비밀번호</label>
-                                            <input type="password" class="input_style" maxlength="25" title="비밀번호를 입력하세요." id="password" name="password" 
+                <div class="user_login">
+                <form:form id="loginForm" name="loginForm" method="post">
+                    <fieldset><legend>조건정보 영역</legend>
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <label for="id">아이디</label>
+                                        <input class="form-control" type="text" id="id" name="id" maxlength="10" />
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <label for="password">비밀번호</label>
+                                        <input class="form-control" type="password" maxlength="25" title="비밀번호를 입력하세요." id="password" name="password"
                                                onkeydown="javascript:if (event.keyCode == 13) { actionLogin(); }"/>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="checkId" title="로그인ID 저장여부" onclick="javascript:saveid(this.form);" id="checkId" />ID저장
-                                        </li>
-                                    </ul>
-                                    <input type="image" alt="로그인" onclick="javascript:actionLogin()" src="<c:url value='/'/>images/login/btn_login.gif"  />
-                                </div>
-                            </fieldset>
-                            <input type="hidden" name="message" value="${message}" />
-                            <input type="hidden" name="userSe"  value="USR"/>
-                            <input name="j_username" type="hidden"/>
-                            </form:form>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <label>로그인ID 저장</label>
+                                        <input class="form-check-input" type="checkbox" name="checkId" title="로그인ID 저장여부" onclick="javascript:saveid(this.form);" id="checkId" />
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                        <a class="small" href="password.html">비밀번호를 잊어버리셨나요?</a>
+                                        <a class="btn btn-primary" onclick="javascript:actionLogin()" >로그인</a>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer text-center py-3">
+                                <div class="small"><a href="#">회원가입</a></div>
+                            </div>
                         </div>
-                        </div>                      
+                        <input type="hidden" name="userSe"  value="USR"/>
+                        <input type="hidden" name="message" value="${message}" />
+                        <input name="j_username" type="hidden"/>
+                    </fieldset>
+                </form:form>
+                </div>
+
+                </div>
+
             <!-- //content 끝 -->    
     </div>  
     <!-- //container 끝 -->
