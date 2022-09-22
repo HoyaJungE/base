@@ -77,76 +77,58 @@ function fnInit() {
 }
 //-->
 </script>
+<!-- 공통 css 추가 시작 -->
+<link href="<c:url value='/css/sb-admin/styles.css'/>" rel="stylesheet" type="text/css" >
+<!-- 공통 css 추가 종료 -->
+<!-- 공통 script 추가 시작 -->
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/bootstrap.bundle.min.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/Chart.min.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/fontawesome-releases-v6.1.0-all.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/scripts.js'/>"></script>
+<script type="text/javascript"  src="<c:url value='/js/sb-admin/simple-datatables@latest.js'/>"></script>
+<!-- 공통 script 추가 종료 -->
 </head>
 <body  onload="fnInit();">
-<noscript>자바스크립트를 지원하지 않는 브라우저에서는 일부 기능을 사용하실 수 없습니다.</noscript>    
+<noscript>자바스크립트를 지원하지 않는 브라우저에서는 일부 기능을 사용하실 수 없습니다.</noscript>
 <!-- 전체 레이어 시작 -->
 <div id="wrap">
-    <!-- header 시작 -->
-    <div id="header"><c:import url="/EgovPageLink.do?link=main/inc/EgovIncHeader" /></div>
-    <div id="topnavi"><c:import url="/sym/mms/EgovMainMenuHead.do" /></div>       
-    <!-- //header 끝 --> 
-    <!-- container 시작 -->
-    <div id="container">
-        <!-- 좌측메뉴 시작 -->
-        <div id="leftmenu"><c:import url="/sym/mms/EgovMainMenuLeft.do" /></div>
-        <!-- //좌측메뉴 끝 -->
-            <!-- content 시작 --> 
-            <div id="content">
-                <div id="cur_loc">
-                    <div id="cur_loc_align">
-                        <ul>
-                            <li>HOME</li>
-                            <li>&gt;</li>
-                            <li>사용자관리</li>
-                            <li>&gt;</li>
-                            <li><strong>사용자 로그인</strong></li>
-                        </ul>
-                    </div>                  
-                </div>
 
-                <div class="user_login">
-                <form:form id="loginForm" name="loginForm" method="post">
-                    <fieldset><legend>조건정보 영역</legend>
-                        <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-floating mb-3">
-                                        <label for="id">아이디</label>
-                                        <input class="form-control" type="text" id="id" name="id" maxlength="10" />
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <label for="password">비밀번호</label>
-                                        <input class="form-control" type="password" maxlength="25" title="비밀번호를 입력하세요." id="password" name="password"
-                                               onkeydown="javascript:if (event.keyCode == 13) { actionLogin(); }"/>
-                                    </div>
-                                    <div class="form-check mb-3">
-                                        <label>로그인ID 저장</label>
-                                        <input class="form-check-input" type="checkbox" name="checkId" title="로그인ID 저장여부" onclick="javascript:saveid(this.form);" id="checkId" />
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <a class="small" href="password.html">비밀번호를 잊어버리셨나요?</a>
-                                        <a class="btn btn-primary" onclick="javascript:actionLogin()" >로그인</a>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card-footer text-center py-3">
-                                <div class="small"><a href="#">회원가입</a></div>
-                            </div>
+    <div class="user_login">
+    <form:form id="loginForm" name="loginForm" method="post">
+        <fieldset><legend>조건정보 영역</legend>
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="id" name="id" maxlength="10" />
+                            <label for="id">아이디</label>
                         </div>
-                        <input type="hidden" name="userSe"  value="USR"/>
-                        <input type="hidden" name="message" value="${message}" />
-                        <input name="j_username" type="hidden"/>
-                    </fieldset>
-                </form:form>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="password" maxlength="25" title="비밀번호를 입력하세요." id="password" name="password"
+                                   onkeydown="javascript:if (event.keyCode == 13) { actionLogin(); }"/>
+                            <label for="password">비밀번호</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <label>로그인ID 저장</label>
+                            <input class="form-check-input" type="checkbox" name="checkId" title="로그인ID 저장여부" onclick="javascript:saveid(this.form);" id="checkId" />
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                            <a class="small" href="password.html">비밀번호를 잊어버리셨나요?</a>
+                            <a class="btn btn-primary" onclick="javascript:actionLogin()" >로그인</a>
+                        </div>
+                    </form>
                 </div>
-
+                <div class="card-footer text-center py-3">
+                    <div class="small"><a href="#">회원가입</a></div>
                 </div>
-
-            <!-- //content 끝 -->    
-    </div>  
-    <!-- //container 끝 -->
+            </div>
+            <input type="hidden" name="userSe"  value="USR"/>
+            <input type="hidden" name="message" value="${message}" />
+            <input name="j_username" type="hidden"/>
+        </fieldset>
+    </form:form>
+    </div>
     <!-- footer 시작 -->
     <div id="footer"><c:import url="/EgovPageLink.do?link=main/inc/EgovIncFooter" /></div>
     <!-- //footer 끝 -->

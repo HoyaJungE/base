@@ -106,7 +106,9 @@ select {
 
 .user_login {
     clear: left;
-    margin: 0;
+    margin: 0 auto;
+    width: 80%;
+    min-height: 700px;
 }
 
 #logoarea{float:left;padding-left:10px;}
@@ -127,7 +129,7 @@ background-position: left center;padding-left:10px;padding-top:2px;letter-spacin
 #wrap{margin-left:0px;width:100%;height:59px;}
 #container{float:left;width:1100px; margin-top:0px;min-height:440px; height:auto !important; height:440px;}
 #leftmenu{float:left;width:200px;min-height:440px; height:auto !important; height:100%; }
-#content{float:left;min-height:441px; height:auto !important; height:441px;padding-left:15px;padding-bottom:10px; border-left:1px solid #dddddd; }
+#content{float:left;min-height:441px; height:auto !important; height:441px;padding-left:15px;padding-bottom:10px; border-left:1px solid #dddddd; border:none;}
 #footer{clear:both;width:100%;font-size:100%;border-top:2px solid #dddddd;}
 #mopaslogo{float:left;padding-top:10px;padding-left:10px;}
 #copyright{float:left;font-size:90%;padding-top:20px;padding-left:20px; letter-spacing: -1px;}
@@ -232,7 +234,7 @@ margin: 0; background-color:#f2f2f2;
     width: 650px;}
 .paging_align .first{border:medium none;padding:0px;}
 .paging_align li{display:inline;border-right:1px solid #dddddd;padding-left:3px;padding-right:10px; vertical-align:middle;}
-.paging_align li a{color:#666666;}
+.paging_align li a{color:#666666; text-decoration: none;}
 .paging_align li a:hover{color:#0958A5;font-weight:bold;}
 .paging_align a:active{color:#0958A5;}
 .paging_align a:visited{color:#0958A5;}
@@ -282,6 +284,7 @@ margin: 0; background-color:#f2f2f2;
 }
 .default_tablestyle a:link, a:visited {
     color: #666666;
+    text-decoration: none;
 }
 .default_tablestyle a:hover {
     color: #1F58B1;
